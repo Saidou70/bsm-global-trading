@@ -103,9 +103,9 @@ img { max-width: 100%; display: block; }
 
 .btn--primary {
   background: var(--gradient-brand); color: #fff;
-  box-shadow: var(--shadow-colored), var(--shadow-inner);
+  box-shadow: var(--shadow-sm), var(--shadow-inner);
 }
-.btn--primary:hover { box-shadow: 0 20px 45px rgba(255, 81, 0, 0.35), var(--shadow-inner); }
+.btn--primary:hover { box-shadow: var(--shadow), var(--shadow-inner); }
 
 .btn--ghost {
   background: var(--glass-dark-bg); color: #fff;
@@ -174,11 +174,7 @@ img { max-width: 100%; display: block; }
   color: #fff; overflow: hidden;
   min-height: 80vh; display: flex; align-items: center;
 }
-.hero::before {
-  content: ''; position: absolute; inset: 0;
-  background: radial-gradient(circle at 70% 50%, rgba(255, 81, 0, 0.15) 0%, transparent 60%);
-  z-index: 1; pointer-events: none;
-}
+
 .hero__bg {
   position: absolute; inset: 0; z-index: 0;
   background-image: 
