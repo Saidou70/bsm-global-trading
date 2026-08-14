@@ -1,14 +1,12 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Stats from "@/components/Stats";
-import Categories from "@/components/Categories";
-import Pricing from "@/components/Pricing";
+import Projects from "@/components/Projects";
+import Catalog from "@/components/Catalog";
 import Features from "@/components/Features";
-import About from "@/components/About";
-import Contact from "@/components/Contact";
-import CtaBand from "@/components/CtaBand";
+import Conseils from "@/components/Conseils";
 import Footer from "@/components/Footer";
 import WhatsappFab from "@/components/WhatsappFab";
+import { Suspense } from "react";
 
 export default function Home() {
   return (
@@ -16,13 +14,12 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <Stats />
-        <Categories />
-        <Pricing />
+        <Projects />
+        <Suspense fallback={<div style={{ textAlign: "center", padding: "100px", color: "var(--slate)" }}>Chargement du catalogue...</div>}>
+          <Catalog />
+        </Suspense>
         <Features />
-        <About />
-        <Contact />
-        <CtaBand />
+        <Conseils />
       </main>
       <Footer />
       <WhatsappFab />

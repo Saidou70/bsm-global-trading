@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Barlow_Condensed } from "next/font/google";
+import { CurrencyProvider } from "@/components/CurrencyProvider";
 import "./globals.css";
 
 const inter = Inter({
@@ -28,7 +29,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className={`${inter.variable} ${barlow.variable}`}>
-      <body>{children}</body>
+      <body>
+        <CurrencyProvider>
+          {children}
+        </CurrencyProvider>
+      </body>
     </html>
   );
 }
