@@ -30,7 +30,7 @@ export default function Header() {
     <>
       <div className="topbar">
         <div className="container topbar__inner" style={{ padding: "8px 0" }}>
-          <div className="topbar__left" style={{ display: "flex", gap: "16px", alignItems: "center" }}>
+          <div className="topbar__left" style={{ display: "flex", gap: "8px 16px", alignItems: "center", flexWrap: "wrap", justifyContent: "center", textAlign: "center" }}>
             <a href="tel:+33649842162" style={{ fontWeight: 600 }}>Tel : <span style={{ color: "var(--brand-red)" }}>+33 6 49 84 21 62</span> (Mr ben)</a>
             <span className="topbar__sep">|</span>
             <a href="tel:0033641850546" style={{ fontWeight: 600 }}>Tel : <span style={{ color: "var(--brand-red)" }}>0033641850546</span> (Mr hannane Samir)</a>
@@ -106,7 +106,7 @@ export default function Header() {
                 router.push(`/#materiel`);
               }
               setOpen(false);
-            }} style={{ flex: 1, position: "relative", marginLeft: "20px" }}>
+            }} className="search-form">
               <input 
                 type="text" 
                 value={searchQuery}
