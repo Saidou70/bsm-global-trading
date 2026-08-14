@@ -34,10 +34,6 @@ export default function Header() {
             <a href="tel:+33649842162" style={{ fontWeight: 600 }}>Tel : <span style={{ color: "var(--brand-red)" }}>+33 6 49 84 21 62</span> (Mr ben)</a>
             <span className="topbar__sep">|</span>
             <a href="tel:0033641850546" style={{ fontWeight: 600 }}>Tel : <span style={{ color: "var(--brand-red)" }}>0033641850546</span> (Mr hannane Samir)</a>
-            <span className="topbar__sep">|</span>
-            <a href="#support">Accessible gratuitement</a>
-            <span className="topbar__sep">|</span>
-            <a href="#agence">Trouver une agence</a>
           </div>
           <div className="topbar__right" style={{ display: "flex", alignItems: "center", gap: "24px" }}>
             <div style={{ 
