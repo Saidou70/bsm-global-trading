@@ -20,7 +20,7 @@ export default function Hero() {
             <p className="animate-fade-up delay-200" style={{ fontSize: "1.2rem", fontWeight: 500, maxWidth: "600px", lineHeight: 1.6 }}>
               Louez facilement du matériel de chantier, des outils, des machines et des équipements adaptés à vos besoins. Service assuré par Ben, disponible partout au Maroc.
             </p>
-            <div className="animate-fade-up delay-300" style={{ marginTop: "32px", display: "flex", gap: "16px" }}>
+            <div className="animate-fade-up delay-300 hero__actions" style={{ marginTop: "32px" }}>
               <a href="#materiel" className="btn btn--primary" style={{ padding: "16px 36px", fontSize: "1.1rem" }}>
                 Voir le catalogue
               </a>
