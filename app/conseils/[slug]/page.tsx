@@ -34,7 +34,7 @@ export default async function ConseilPage({ params }: { params: Promise<{ slug: 
 
           <div style={{ backgroundColor: "#fff", borderRadius: "24px", overflow: "hidden", boxShadow: "var(--shadow-sm)" }}>
             
-            <div style={{ position: "relative", width: "100%", height: "400px" }}>
+            <div style={{ position: "relative", width: "100%", height: "clamp(200px, 40vw, 400px)" }}>
               <Image 
                 src={conseil.image} 
                 alt={conseil.title} 
@@ -44,7 +44,7 @@ export default async function ConseilPage({ params }: { params: Promise<{ slug: 
               />
             </div>
 
-            <div style={{ padding: "40px" }}>
+            <div style={{ padding: "clamp(24px, 5vw, 40px)" }}>
               <div style={{ color: "var(--slate)", fontSize: "0.9rem", textTransform: "uppercase", letterSpacing: "1px", marginBottom: "16px", fontWeight: 700 }}>
                 Publié le {conseil.date}
               </div>

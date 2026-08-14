@@ -33,10 +33,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             </Link>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", gap: "40px", backgroundColor: "#fff", padding: "40px", borderRadius: "16px", boxShadow: "var(--shadow-sm)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 350px), 1fr))", gap: "40px", backgroundColor: "#fff", padding: "clamp(20px, 5vw, 40px)", borderRadius: "16px", boxShadow: "var(--shadow-sm)" }}>
             
             {/* Left Col: Image */}
-            <div style={{ position: "relative", width: "100%", height: "400px", backgroundColor: "#fff", border: "1px solid var(--line)", borderRadius: "12px" }}>
+            <div style={{ position: "relative", width: "100%", height: "clamp(250px, 50vw, 400px)", backgroundColor: "#fff", border: "1px solid var(--line)", borderRadius: "12px" }}>
               <Image 
                 src={product.image} 
                 alt={product.name} 
@@ -78,16 +78,16 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           </div>
 
           {/* Details & Specs */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(400px, 1fr))", gap: "40px", marginTop: "40px" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 350px), 1fr))", gap: "40px", marginTop: "40px" }}>
             
-            <div style={{ backgroundColor: "#fff", padding: "40px", borderRadius: "16px", boxShadow: "var(--shadow-sm)" }}>
+            <div style={{ backgroundColor: "#fff", padding: "clamp(24px, 5vw, 40px)", borderRadius: "16px", boxShadow: "var(--shadow-sm)" }}>
               <h2 style={{ fontSize: "1.8rem", color: "var(--navy)", marginBottom: "24px" }}>Description détaillée</h2>
               <p style={{ color: "var(--slate)", fontSize: "1.05rem", lineHeight: 1.7 }}>
                 {product.longDescription}
               </p>
             </div>
 
-            <div style={{ backgroundColor: "#fff", padding: "40px", borderRadius: "16px", boxShadow: "var(--shadow-sm)" }}>
+            <div style={{ backgroundColor: "#fff", padding: "clamp(24px, 5vw, 40px)", borderRadius: "16px", boxShadow: "var(--shadow-sm)" }}>
               <h2 style={{ fontSize: "1.8rem", color: "var(--navy)", marginBottom: "24px" }}>Caractéristiques techniques</h2>
               <table style={{ width: "100%", borderCollapse: "collapse" }}>
                 <tbody>
