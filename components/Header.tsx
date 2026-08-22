@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useCurrency } from "./CurrencyProvider";
 import { company } from "@/lib/data";
+import Link from "next/link";
 
 const links = [
   { href: "#materiel", label: "Location" },
@@ -33,7 +34,7 @@ export default function Header() {
           <div className="topbar__left" style={{ display: "flex", gap: "8px 16px", alignItems: "center", flexWrap: "wrap", justifyContent: "center", textAlign: "center" }}>
             <a href="tel:+33649842162" style={{ fontWeight: 600 }}>Tel : <span style={{ color: "var(--brand-red)" }}>+33 6 49 84 21 62</span> (Mr ben)</a>
             <span className="topbar__sep">|</span>
-            <a href="tel:0033641850546" style={{ fontWeight: 600 }}>Tel : <span style={{ color: "var(--brand-red)" }}>0033641850546</span> (Mr hannane Samir)</a>
+            <a href="tel:+33641850546" style={{ fontWeight: 600 }}>Tel : <span style={{ color: "var(--brand-red)" }}>+33641850546</span> (Mr hannane)</a>
           </div>
           <div className="topbar__right" style={{ display: "flex", alignItems: "center", gap: "24px" }}>
             <div style={{ 
@@ -87,15 +88,15 @@ export default function Header() {
       <header className={`header${scrolled ? " scrolled" : ""}`} id="top" style={{ padding: "10px 0" }}>
         <div className="container header__inner" style={{ display: "flex", alignItems: "center", gap: "40px" }}>
           
-          <a href="#top" className="brand" style={{ gap: "10px" }}>
+          <Link href="/" className="brand" style={{ gap: "10px" }}>
             <span className="brand__mark" style={{ fontSize: "1.8rem", padding: "10px 16px" }}>BSM</span>
-          </a>
+          </Link>
 
           <nav className={`nav${open ? " open" : ""}`} style={{ flex: 1, gap: "24px" }}>
             {links.map((l) => (
-              <a key={l.href} href={l.href} onClick={() => setOpen(false)} style={{ fontSize: "1.1rem", textTransform: "uppercase", fontWeight: 700 }}>
+              <Link key={l.href} href={l.href.startsWith('#') ? `/${l.href}` : l.href} onClick={() => setOpen(false)} style={{ fontSize: "1.1rem", textTransform: "uppercase", fontWeight: 700 }}>
                 {l.label}
-              </a>
+              </Link>
             ))}
             
             <form onSubmit={(e) => {

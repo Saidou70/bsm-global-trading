@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsappFab from "@/components/WhatsappFab";
 import ProductPricing from "@/components/ProductPricing";
 import Link from "next/link";
-
+import ProductCarousel from "@/components/ProductCarousel";
 export function generateStaticParams() {
   return catalog.map((product) => ({
     slug: product.slug,
@@ -36,13 +36,24 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 350px), 1fr))", gap: "40px", backgroundColor: "#fff", padding: "clamp(20px, 5vw, 40px)", borderRadius: "16px", boxShadow: "var(--shadow-sm)" }}>
             
             {/* Left Col: Image */}
-            <div style={{ position: "relative", width: "100%", height: "clamp(250px, 50vw, 400px)", backgroundColor: "#fff", border: "1px solid var(--line)", borderRadius: "12px" }}>
-              <Image 
-                src={product.image} 
+            <div style={{ width: "100%" }}>
+              <ProductCarousel 
+                images={product.images && product.images.length > 0 ? product.images : [product.image]} 
                 alt={product.name} 
-                fill 
-                style={{ objectFit: "contain", padding: "24px" }} 
-                unoptimized 
+                descriptionNode={
+                  <div style={{ textAlign: "center", color: "var(--navy)" }}>
+                    <h3 style={{ fontSize: "1.5rem", marginBottom: "16px", color: "var(--brand-red)" }}>{product.name}</h3>
+                    <p style={{ fontSize: "1rem", lineHeight: 1.6, marginBottom: "20px" }}>{product.description}</p>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px", textAlign: "left" }}>
+                      {product.specs.slice(0, 4).map((spec, i) => (
+                        <div key={i} style={{ backgroundColor: "#F3F4F6", padding: "12px", borderRadius: "8px" }}>
+                          <div style={{ fontSize: "0.8rem", color: "var(--slate)", textTransform: "uppercase", fontWeight: 700 }}>{spec.label}</div>
+                          <div style={{ fontSize: "1rem", fontWeight: 600 }}>{spec.value}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                }
               />
             </div>
 

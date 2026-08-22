@@ -18,6 +18,7 @@ export interface Product {
   specs: ProductSpec[];
   prices: ProductPrice[];
   image: string;
+  images?: string[];
   rating: number;
 }
 
@@ -41,28 +42,8 @@ export const catalog: Product[] = [
       { duration: "Weekend", price: "76,06 €", unit: "TTC/weekend" }
     ],
     image: "/images/plaque_vibrante.png",
+    images: ["/images/plaque_vibrante.png", "/images/plaque_vibrante_profil.png", "/images/worker_compactor.png"],
     rating: 4.6
-  },
-  {
-    slug: "broyeur-vegetaux-55mm",
-    name: "Broyeur de végétaux",
-    category: "Équipement de chantier",
-    description: "Broyeur thermique très performant pour branches jusqu'à 55mm de diamètre.",
-    longDescription: "Ce broyeur de végétaux thermique est l'outil indispensable pour l'entretien de vos espaces verts. Il réduit efficacement et rapidement vos déchets de taille (haies, arbustes, arbres) en copeaux, facilitant ainsi leur évacuation ou leur utilisation en paillage. Son moteur puissant et son système de coupe robuste garantissent un rendement optimal, même sur du bois dur.",
-    specs: [
-      { label: "Diamètre max", value: "Ø 55 mm" },
-      { label: "Énergie", value: "Essence 4 temps" },
-      { label: "Poids", value: "95 kg" },
-      { label: "Rendement", value: "4 m³/h" }
-    ],
-    prices: [
-      { duration: "1 j", price: "122,52 €", unit: "TTC/jour" },
-      { duration: "De 2 à 6 j", price: "115,06 €", unit: "TTC/jour" },
-      { duration: "Plus de 7 j", price: "93,90 €", unit: "TTC/jour" },
-      { duration: "Weekend", price: "133,93 €", unit: "TTC/weekend" }
-    ],
-    image: "/images/broyeur.png",
-    rating: 4.2
   },
   {
     slug: "minipelle-chenilles-1t",
@@ -83,28 +64,8 @@ export const catalog: Product[] = [
       { duration: "Weekend", price: "383,12 €", unit: "TTC/weekend" }
     ],
     image: "/images/minipelle.png",
+    images: ["/images/minipelle.png", "/images/minipelle_profil.png", "/images/worker_minipelle.jpg"],
     rating: 4.5
-  },
-  {
-    slug: "motobineuse-thermique-8ch",
-    name: "Motobineuse",
-    category: "Équipement de chantier",
-    description: "Parfaite pour retourner la terre de votre potager ou de votre pelouse avant semis.",
-    longDescription: "La motobineuse thermique est idéale pour les travaux de préparation des sols sur des surfaces moyennes à grandes. Elle permet d'ameublir la terre en profondeur, d'enfouir le compost ou les engrais, et de désherber efficacement. Équipée de fraises robustes et d'un guidon réglable, elle offre un grand confort d'utilisation et une efficacité redoutable.",
-    specs: [
-      { label: "Puissance", value: "4/8 ch" },
-      { label: "Énergie", value: "Essence 4 temps" },
-      { label: "Largeur de travail", value: "80 cm" },
-      { label: "Profondeur", value: "32 cm" }
-    ],
-    prices: [
-      { duration: "1 j", price: "110,58 €", unit: "TTC/jour" },
-      { duration: "De 2 à 6 j", price: "104,59 €", unit: "TTC/jour" },
-      { duration: "Plus de 7 j", price: "84,80 €", unit: "TTC/jour" },
-      { duration: "Weekend", price: "121,03 €", unit: "TTC/weekend" }
-    ],
-    image: "/images/motobineuse.png",
-    rating: 4.1
   },
   {
     slug: "echafaudage-roulant-5m",
@@ -125,6 +86,7 @@ export const catalog: Product[] = [
       { duration: "Weekend", price: "188,28 €", unit: "TTC/weekend" }
     ],
     image: "/images/echafaudage.png",
+    images: ["/images/echafaudage.png", "/images/echafaudage_profil.png", "/images/worker_echafaudage.jpg"],
     rating: 4.4
   },
   {
@@ -146,6 +108,7 @@ export const catalog: Product[] = [
       { duration: "Weekend", price: "295,00 €", unit: "TTC/weekend" }
     ],
     image: "/images/nacelle.png",
+    images: ["/images/nacelle.png", "/images/nacelle_profil.png", "/images/worker_nacelle_articulee.jpg"],
     rating: 4.8
   },
   {
@@ -167,6 +130,7 @@ export const catalog: Product[] = [
       { duration: "Weekend", price: "55,00 €", unit: "TTC/weekend" }
     ],
     image: "/images/groupe_electrogene.png",
+    images: ["/images/groupe_electrogene.png", "/images/groupe_electrogene_profil.png", "/images/worker_groupe_3kva.jpg"],
     rating: 4.3
   },
   {
@@ -178,6 +142,7 @@ export const catalog: Product[] = [
     specs: [{ label: "Hauteur", value: "8 m" }, { label: "Énergie", value: "Électrique" }, { label: "Capacité", value: "230 kg" }, { label: "Poids", value: "1500 kg" }],
     prices: [{ duration: "1 j", price: "90,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "75,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "60,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "120,00 €", unit: "TTC/weekend" }],
     image: "/images/nacelle_ciseaux.png",
+    images: ["/images/nacelle_ciseaux.png", "/images/nacelle_ciseaux_profil.png", "/images/worker_nacelle_ciseaux.jpg"],
     rating: 4.5
   },
   {
@@ -189,18 +154,8 @@ export const catalog: Product[] = [
     specs: [{ label: "Hauteur", value: "22 m" }, { label: "Déport max", value: "17 m" }, { label: "Énergie", value: "Diesel" }, { label: "Poids", value: "10 t" }],
     prices: [{ duration: "1 j", price: "350,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "300,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "250,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "450,00 €", unit: "TTC/weekend" }],
     image: "/images/nacelle_telescopique.png",
+    images: ["/images/nacelle_telescopique.png", "/images/nacelle_telescopique_profil.png", "/images/worker_nacelle_telescopique.jpg"],
     rating: 4.8
-  },
-  {
-    slug: "nacelle-sur-camion-16m",
-    name: "Nacelle sur camion 16m",
-    category: "Élévation de personnes",
-    description: "Mobilité maximale pour des interventions rapides sur plusieurs sites.",
-    longDescription: "Permis B suffit. Nacelle élévatrice montée sur véhicule léger pour l'éclairage public, l'élagage ou le nettoyage de façades.",
-    specs: [{ label: "Hauteur", value: "16 m" }, { label: "Déport max", value: "7,5 m" }, { label: "Permis", value: "Permis B" }, { label: "Énergie", value: "Diesel" }],
-    prices: [{ duration: "1 j", price: "200,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "180,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "150,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "280,00 €", unit: "TTC/weekend" }],
-    image: "/images/nacelle_camion.png",
-    rating: 4.6
   },
   {
     slug: "chariot-elevateur-frontal-2-5t",
@@ -211,18 +166,8 @@ export const catalog: Product[] = [
     specs: [{ label: "Capacité", value: "2,5 t" }, { label: "Hauteur levée", value: "3,3 m" }, { label: "Énergie", value: "Gaz / Diesel" }, { label: "Poids", value: "3,6 t" }],
     prices: [{ duration: "1 j", price: "150,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "130,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "100,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "200,00 €", unit: "TTC/weekend" }],
     image: "/images/chariot_elevateur.png",
+    images: ["/images/chariot_elevateur.png", "/images/chariot_elevateur_profil.png", "/images/worker_chariot_elevateur.jpg"],
     rating: 4.7
-  },
-  {
-    slug: "chariot-telescopique-14m",
-    name: "Chariot télescopique 14m",
-    category: "Manutention & levage",
-    description: "Véritable couteau suisse du chantier pour lever et placer des charges.",
-    longDescription: "Chariot télescopique tout-terrain avec stabilisateurs, idéal pour lever des matériaux de construction jusqu'à 14 mètres de hauteur.",
-    specs: [{ label: "Capacité", value: "4 t" }, { label: "Hauteur levée", value: "14 m" }, { label: "Déport", value: "9 m" }, { label: "Énergie", value: "Diesel" }],
-    prices: [{ duration: "1 j", price: "220,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "190,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "160,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "300,00 €", unit: "TTC/weekend" }],
-    image: "/images/chariot_telescopique.png",
-    rating: 4.9
   },
   {
     slug: "transpalette-electrique",
@@ -233,18 +178,8 @@ export const catalog: Product[] = [
     specs: [{ label: "Capacité", value: "1,5 t" }, { label: "Levée", value: "200 mm" }, { label: "Énergie", value: "Électrique" }, { label: "Poids", value: "200 kg" }],
     prices: [{ duration: "1 j", price: "40,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "35,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "25,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "60,00 €", unit: "TTC/weekend" }],
     image: "/images/transpalette.png",
+    images: ["/images/transpalette.png", "/images/transpalette_profil.png", "/images/worker_transpalette.jpg"],
     rating: 4.3
-  },
-  {
-    slug: "mini-grue-araignee",
-    name: "Mini-grue araignée",
-    category: "Manutention & levage",
-    description: "Passe par une porte standard et lève des charges lourdes en intérieur.",
-    longDescription: "Grue compacte sur chenilles avec stabilisateurs en étoile, parfaite pour la pose de vitrages ou la charpente dans les espaces restreints.",
-    specs: [{ label: "Capacité max", value: "2,9 t" }, { label: "Hauteur max", value: "8,7 m" }, { label: "Largeur", value: "0,6 m" }, { label: "Énergie", value: "Bi-énergie" }],
-    prices: [{ duration: "1 j", price: "400,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "350,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "300,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "550,00 €", unit: "TTC/weekend" }],
-    image: "/images/mini_grue.png",
-    rating: 4.8
   },
   {
     slug: "gerbeur-electrique",
@@ -255,6 +190,7 @@ export const catalog: Product[] = [
     specs: [{ label: "Capacité", value: "1,2 t" }, { label: "Hauteur levée", value: "3 m" }, { label: "Énergie", value: "Électrique" }, { label: "Poids", value: "600 kg" }],
     prices: [{ duration: "1 j", price: "80,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "70,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "50,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "110,00 €", unit: "TTC/weekend" }],
     image: "/images/gerbeur.png",
+    images: ["/images/gerbeur.png", "/images/gerbeur_profil.png", "/images/worker_gerbeur.jpg"],
     rating: 4.4
   },
   {
@@ -266,18 +202,8 @@ export const catalog: Product[] = [
     specs: [{ label: "Puissance", value: "40 kVA" }, { label: "Tension", value: "230V / 400V" }, { label: "Énergie", value: "Diesel" }, { label: "Autonomie", value: "24h" }],
     prices: [{ duration: "1 j", price: "140,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "120,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "90,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "190,00 €", unit: "TTC/weekend" }],
     image: "/images/groupe_40kva.png",
+    images: ["/images/groupe_40kva.png", "/images/groupe_40kva_profil.png", "/images/worker_groupe_40kva.jpg"],
     rating: 4.7
-  },
-  {
-    slug: "tour-eclairage-mobile",
-    name: "Tour d'éclairage mobile",
-    category: "Énergie & électricité",
-    description: "Éclairage surpuissant pour les travaux de nuit ou l'événementiel.",
-    longDescription: "Mât d'éclairage télescopique équipé de projecteurs LED sur groupe électrogène intégré, couvrant jusqu'à 4000 m².",
-    specs: [{ label: "Hauteur mât", value: "8 m" }, { label: "Puissance", value: "4x 320W LED" }, { label: "Énergie", value: "Diesel" }, { label: "Surface", value: "4000 m²" }],
-    prices: [{ duration: "1 j", price: "110,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "95,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "75,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "150,00 €", unit: "TTC/weekend" }],
-    image: "/images/tour_eclairage.png",
-    rating: 4.5
   },
   {
     slug: "coffret-chantier",
@@ -288,18 +214,8 @@ export const catalog: Product[] = [
     specs: [{ label: "Alimentation", value: "63A" }, { label: "Prises 230V", value: "6" }, { label: "Prises 400V", value: "2" }, { label: "Protection", value: "IP44" }],
     prices: [{ duration: "1 j", price: "15,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "12,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "9,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "20,00 €", unit: "TTC/weekend" }],
     image: "/images/coffret_chantier.png",
+    images: ["/images/coffret_chantier.png", "/images/coffret_chantier_profil.png", "/images/worker_coffret.jpg"],
     rating: 4.2
-  },
-  {
-    slug: "chauffage-fioul",
-    name: "Chauffage fioul indirect",
-    category: "Énergie & électricité",
-    description: "Chaleur propre et sèche pour grands volumes.",
-    longDescription: "Canon à chaleur à combustion indirecte avec évacuation des gaz brûlés. Idéal pour sécher le béton ou chauffer un chapiteau sans odeur.",
-    specs: [{ label: "Puissance", value: "80 kW" }, { label: "Débit d'air", value: "3300 m³/h" }, { label: "Énergie", value: "Fioul/GNR" }, { label: "Autonomie", value: "14h" }],
-    prices: [{ duration: "1 j", price: "85,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "75,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "55,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "120,00 €", unit: "TTC/weekend" }],
-    image: "/images/chauffage_fioul.png",
-    rating: 4.6
   },
   {
     slug: "chargeuse-compacte",
@@ -310,18 +226,8 @@ export const catalog: Product[] = [
     specs: [{ label: "Capacité godet", value: "800 L" }, { label: "Poids", value: "4,5 t" }, { label: "Largeur", value: "1,75 m" }, { label: "Énergie", value: "Diesel" }],
     prices: [{ duration: "1 j", price: "280,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "250,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "190,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "390,00 €", unit: "TTC/weekend" }],
     image: "/images/chargeuse.png",
+    images: ["/images/chargeuse.png", "/images/chargeuse_profil.png", "/images/worker_chargeuse.jpg"],
     rating: 4.7
-  },
-  {
-    slug: "dumper-articule",
-    name: "Dumper articulé 3T",
-    category: "Terrassement",
-    description: "Évacuation de gravats et transport de terre sur terrains difficiles.",
-    longDescription: "Tombereau de chantier 4x4 compact à benne rotative, idéal pour déplacer de gros volumes de terre dans les espaces exigus.",
-    specs: [{ label: "Charge utile", value: "3 t" }, { label: "Capacité benne", value: "1500 L" }, { label: "Largeur", value: "1,65 m" }, { label: "Énergie", value: "Diesel" }],
-    prices: [{ duration: "1 j", price: "160,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "140,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "110,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "220,00 €", unit: "TTC/weekend" }],
-    image: "/images/dumper.png",
-    rating: 4.5
   },
   {
     slug: "minipelle-5t",
@@ -332,6 +238,7 @@ export const catalog: Product[] = [
     specs: [{ label: "Poids", value: "5 t" }, { label: "Profondeur fouille", value: "3,8 m" }, { label: "Largeur", value: "1,96 m" }, { label: "Énergie", value: "Diesel" }],
     prices: [{ duration: "1 j", price: "300,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "260,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "210,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "400,00 €", unit: "TTC/weekend" }],
     image: "/images/minipelle_5t.png",
+    images: ["/images/minipelle_5t.png", "/images/minipelle_5t_profil.png", "/images/worker_minipelle_5t.jpg"],
     rating: 4.8
   },
   {
@@ -343,6 +250,7 @@ export const catalog: Product[] = [
     specs: [{ label: "Pour pelle de", value: "2.5 à 5 t" }, { label: "Poids", value: "150 kg" }, { label: "Coups/min", value: "600-1200" }, { label: "Outil", value: "Pic / Burin" }],
     prices: [{ duration: "1 j", price: "90,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "80,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "60,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "130,00 €", unit: "TTC/weekend" }],
     image: "/images/brise_roche.png",
+    images: ["/images/brise_roche.png", "/images/brise_roche_profil.png", "/images/worker_brh.jpg"],
     rating: 4.6
   },
   {
@@ -354,29 +262,8 @@ export const catalog: Product[] = [
     specs: [{ label: "Force de frappe", value: "15 kN" }, { label: "Poids", value: "65 kg" }, { label: "Semelle", value: "280 mm" }, { label: "Énergie", value: "Essence 4T" }],
     prices: [{ duration: "1 j", price: "65,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "55,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "40,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "90,00 €", unit: "TTC/weekend" }],
     image: "/images/pilonneuse.png",
+    images: ["/images/pilonneuse.png", "/images/pilonneuse_profil.png", "/images/worker_pilonneuse.jpg"],
     rating: 4.4
-  },
-  {
-    slug: "rouleau-tandem",
-    name: "Rouleau tandem",
-    category: "Compactage",
-    description: "Pour le compactage de l'asphalte et des sous-couches.",
-    longDescription: "Rouleau vibrant autoporté à double bille, indispensable pour les travaux de voirie, parkings et pistes cyclables.",
-    specs: [{ label: "Poids", value: "2,6 t" }, { label: "Largeur bille", value: "120 cm" }, { label: "Force centrifuge", value: "30 kN" }, { label: "Énergie", value: "Diesel" }],
-    prices: [{ duration: "1 j", price: "220,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "190,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "150,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "300,00 €", unit: "TTC/weekend" }],
-    image: "/images/rouleau_tandem.png",
-    rating: 4.7
-  },
-  {
-    slug: "rouleau-tranchee",
-    name: "Rouleau de tranchée",
-    category: "Compactage",
-    description: "Compactage sécurisé télécommandé pour les fonds de tranchées.",
-    longDescription: "Rouleau pied de mouton articulé avec télécommande. Permet de compacter au fond des tranchées sans risque d'éboulement pour l'opérateur.",
-    specs: [{ label: "Poids", value: "1,4 t" }, { label: "Largeur", value: "85 cm" }, { label: "Contrôle", value: "Télécommande" }, { label: "Énergie", value: "Diesel" }],
-    prices: [{ duration: "1 j", price: "240,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "210,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "170,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "330,00 €", unit: "TTC/weekend" }],
-    image: "/images/rouleau_tranchee.png",
-    rating: 4.9
   },
   {
     slug: "plaque-reversible-400kg",
@@ -387,6 +274,7 @@ export const catalog: Product[] = [
     specs: [{ label: "Poids", value: "400 kg" }, { label: "Force", value: "55 kN" }, { label: "Largeur", value: "600 mm" }, { label: "Énergie", value: "Diesel" }],
     prices: [{ duration: "1 j", price: "110,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "95,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "75,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "150,00 €", unit: "TTC/weekend" }],
     image: "/images/plaque_reversible.png",
+    images: ["/images/plaque_reversible.png", "/images/plaque_reversible_profil.png", "/images/worker_plaque_400kg.jpg"],
     rating: 4.5
   },
   {
@@ -398,6 +286,7 @@ export const catalog: Product[] = [
     specs: [{ label: "Poids", value: "30 kg" }, { label: "Force de frappe", value: "65 Joules" }, { label: "Énergie", value: "Électrique 230V" }, { label: "Emmanchement", value: "Hexagonal 28mm" }],
     prices: [{ duration: "1 j", price: "45,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "38,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "30,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "60,00 €", unit: "TTC/weekend" }],
     image: "/images/marteau_piqueur.png",
+    images: ["/images/marteau_piqueur.png", "/images/marteau_piqueur_profil.png", "/images/worker_marteau_piqueur.jpg"],
     rating: 4.6
   },
   {
@@ -409,18 +298,8 @@ export const catalog: Product[] = [
     specs: [{ label: "Cuve", value: "350 L" }, { label: "Malaxage", value: "280 L" }, { label: "Énergie", value: "Essence 4T" }, { label: "Tractable", value: "Oui (90 km/h)" }],
     prices: [{ duration: "1 j", price: "40,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "35,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "25,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "55,00 €", unit: "TTC/weekend" }],
     image: "/images/betonniere.png",
+    images: ["/images/betonniere.png", "/images/betonniere_profil.png", "/images/worker_betonniere.jpg"],
     rating: 4.4
-  },
-  {
-    slug: "compresseur-air",
-    name: "Compresseur d'air",
-    category: "Équipement de chantier",
-    description: "Alimentation pour outils pneumatiques ou sablage.",
-    longDescription: "Compresseur diesel tractable, fournissant un débit d'air important pour l'utilisation simultanée de plusieurs brise-béton pneumatiques.",
-    specs: [{ label: "Débit", value: "3000 L/min" }, { label: "Pression", value: "7 Bar" }, { label: "Énergie", value: "Diesel" }, { label: "Poids", value: "650 kg" }],
-    prices: [{ duration: "1 j", price: "85,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "75,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "55,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "120,00 €", unit: "TTC/weekend" }],
-    image: "/images/compresseur.png",
-    rating: 4.3
   },
   {
     slug: "cloture-chantier",
@@ -431,18 +310,8 @@ export const catalog: Product[] = [
     specs: [{ label: "Longueur", value: "3,5 m / panneau" }, { label: "Hauteur", value: "2 m" }, { label: "Matériau", value: "Acier galvanisé" }, { label: "Maintien", value: "Plot béton 35kg" }],
     prices: [{ duration: "1 j", price: "2,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "1,50 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "0,50 €", unit: "TTC/jour" }, { duration: "Weekend", price: "3,00 €", unit: "TTC/weekend" }],
     image: "/images/cloture.png",
+    images: ["/images/cloture.png", "/images/cloture_profil.png", "/images/worker_cloture.jpg"],
     rating: 4.5
-  },
-  {
-    slug: "base-de-vie",
-    name: "Base de vie roulante",
-    category: "Installations provisoires et sécurité",
-    description: "Vestiaire, réfectoire et sanitaire pour les compagnons.",
-    longDescription: "Roulotte de chantier tractable, isolée et chauffée. Équipée d'un coin repas, de vestiaires et de sanitaires autonomes.",
-    specs: [{ label: "Capacité", value: "4 à 6 pers." }, { label: "Longueur", value: "4,5 m" }, { label: "Alimentation", value: "230V ou Gaz" }, { label: "Équipement", value: "Réfectoire + WC" }],
-    prices: [{ duration: "1 j", price: "60,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "50,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "35,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "80,00 €", unit: "TTC/weekend" }],
-    image: "/images/base_de_vie.png",
-    rating: 4.8
   },
   {
     slug: "wc-autonome",
@@ -453,6 +322,7 @@ export const catalog: Product[] = [
     specs: [{ label: "Type", value: "Chimique" }, { label: "Capacité cuve", value: "250 L" }, { label: "Lave-mains", value: "Intégré" }, { label: "Poids à vide", value: "85 kg" }],
     prices: [{ duration: "1 j", price: "30,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "25,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "15,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "40,00 €", unit: "TTC/weekend" }],
     image: "/images/wc_autonome.png",
+    images: ["/images/wc_autonome.png", "/images/wc_autonome_profil.png", "/images/worker_wc.jpg"],
     rating: 4.1
   },
   {
@@ -464,7 +334,56 @@ export const catalog: Product[] = [
     specs: [{ label: "Technologie", value: "LED" }, { label: "Synchro", value: "Radio" }, { label: "Énergie", value: "Batteries 12V" }, { label: "Autonomie", value: "3 semaines" }],
     prices: [{ duration: "1 j", price: "50,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "40,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "25,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "70,00 €", unit: "TTC/weekend" }],
     image: "/images/feux_tricolores.png",
+    images: ["/images/feux_tricolores.png", "/images/feux_tricolores_profil.png", "/images/worker_feux.jpg"],
     rating: 4.7
+  },
+  {
+    slug: "ponceuse-girafe",
+    name: "Ponceuse girafe télescopique",
+    category: "Travaux intérieur",
+    description: "Ponceuse à bras télescopique pour le ponçage sans effort des murs et plafonds.",
+    longDescription: "La ponceuse girafe est l'outil indispensable pour poncer de grandes surfaces en hauteur (murs, plafonds) sans fatigue. Équipée d'une tête articulée et d'un système d'aspiration des poussières très performant, elle garantit un travail propre, rapide et une finition parfaitement lisse pour vos travaux de plaquisterie et de peinture.",
+    specs: [{ label: "Puissance", value: "710 W" }, { label: "Diamètre plateau", value: "225 mm" }, { label: "Poids", value: "4,5 kg" }, { label: "Énergie", value: "Électrique 230V" }],
+    prices: [{ duration: "1 j", price: "35,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "30,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "25,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "50,00 €", unit: "TTC/weekend" }],
+    image: "/images/ponceuse_girafe.jpg",
+    images: ["/images/ponceuse_girafe.jpg", "/images/ponceuse_girafe_profil.png", "/images/worker_ponceuse.jpg"],
+    rating: 4.6
+  },
+  {
+    slug: "niveau-laser-360",
+    name: "Niveau laser 360° vert",
+    category: "Travaux intérieur",
+    description: "Niveau laser multi-lignes vert haute visibilité pour un alignement parfait à 360°.",
+    longDescription: "Le niveau laser professionnel avec faisceau vert offre une visibilité jusqu'à quatre fois supérieure à celle des lignes rouges. Il projette 3 lignes à 360° permettant de réaliser simultanément des mises à niveau dans toute la pièce. Outil parfait pour le carrelage, les faux-plafonds et l'agencement intérieur.",
+    specs: [{ label: "Portée", value: "30 m" }, { label: "Couleur faisceau", value: "Vert" }, { label: "Précision", value: "± 0,2 mm/m" }, { label: "Énergie", value: "Batterie Li-Ion" }],
+    prices: [{ duration: "1 j", price: "40,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "35,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "28,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "60,00 €", unit: "TTC/weekend" }],
+    image: "/images/niveau_laser.jpg",
+    images: ["/images/niveau_laser.jpg", "/images/niveau_laser_profil.png", "/images/niveau_laser_detail.png", "/images/worker_laser.jpg"],
+    rating: 4.9
+  },
+  {
+    slug: "aspirateur-chantier-eau-poussiere",
+    name: "Aspirateur eau et poussière",
+    category: "Travaux intérieur",
+    description: "Aspirateur industriel puissant pour l'aspiration d'eau et de poussières de chantier.",
+    longDescription: "Cet aspirateur professionnel est conçu pour résister aux environnements les plus exigeants. Capable d'aspirer indifféremment l'eau et les gravats, il dispose d'une prise asservie permettant de brancher un outil électroportatif pour une aspiration directe des poussières à la source.",
+    specs: [{ label: "Cuve", value: "30 L" }, { label: "Débit d'air", value: "3600 L/min" }, { label: "Dépression", value: "210 mbar" }, { label: "Puissance", value: "1200 W" }],
+    prices: [{ duration: "1 j", price: "30,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "25,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "20,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "45,00 €", unit: "TTC/weekend" }],
+    image: "/images/aspirateur_chantier.jpg",
+    images: ["/images/aspirateur_chantier.jpg", "/images/aspirateur_chantier_profil.png", "/images/worker_aspirateur.jpg"],
+    rating: 4.7
+  },
+  {
+    slug: "scie-circulaire-bois",
+    name: "Scie circulaire professionnelle",
+    category: "Travaux intérieur",
+    description: "Scie circulaire filaire puissante pour des coupes droites et précises dans le bois.",
+    longDescription: "Idéale pour les travaux de charpente, l'agencement et la découpe de panneaux, cette scie circulaire offre une grande profondeur de coupe et un moteur robuste. Son système de guidage et sa conception équilibrée assurent une sécurité optimale et un grand confort d'utilisation.",
+    specs: [{ label: "Puissance", value: "2000 W" }, { label: "Lame", value: "270 mm" }, { label: "Coupe max", value: "100 mm" }, { label: "Énergie", value: "Électrique 230V" }],
+    prices: [{ duration: "1 j", price: "35,00 €", unit: "TTC/jour" }, { duration: "De 2 à 6 j", price: "30,00 €", unit: "TTC/jour" }, { duration: "Plus de 7 j", price: "20,00 €", unit: "TTC/jour" }, { duration: "Weekend", price: "50,00 €", unit: "TTC/weekend" }],
+    image: "/images/scie_circulaire.jpg",
+    images: ["/images/scie_circulaire.jpg", "/images/scie_circulaire_profil.png", "/images/scie_circulaire_detail.png", "/images/worker_scie.jpg"],
+    rating: 4.8
   }
 ];
 

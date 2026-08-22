@@ -14,6 +14,7 @@ const filters = [
   { icon: "🚜", title: "Terrassement" },
   { icon: "🧱", title: "Compactage" },
   { icon: "🔧", title: "Équipement de chantier" },
+  { icon: "🛠️", title: "Travaux intérieur" },
   { icon: "🏗️", title: "Installations provisoires et sécurité" },
 ];
 

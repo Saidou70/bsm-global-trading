@@ -15,14 +15,7 @@ export default function Features() {
           </p>
         </div>
 
-        <div style={{ display: "flex", justifyContent: "center", marginBottom: "80px" }}>
-          <div style={{ backgroundColor: "#fff", border: "1px solid var(--line)", borderRadius: "16px", padding: "40px", textAlign: "center", boxShadow: "var(--shadow-sm)", maxWidth: "400px", width: "100%" }}>
-            <h3 style={{ fontSize: "1.3rem", color: "var(--navy)", marginBottom: "32px" }}>Appeler notre service client</h3>
-            <a href="tel:0800204080" className="btn btn--light" style={{ width: "100%", color: "var(--brand-red)", borderColor: "var(--brand-red)", borderWidth: "1px", borderStyle: "solid" }}>
-              0 800 204080
-            </a>
-          </div>
-        </div>
+
 
         {/* Benefits block */}
         <div style={{ textAlign: "center", marginBottom: "40px" }}>
