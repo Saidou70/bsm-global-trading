@@ -12,8 +12,7 @@ export const company = {
   ],
 };
 
-// Taux de conversion indicatif (1 € = X DH)
-export const RATE_DH_PER_EUR = 10.9;
+// Taux de conversion dynamique en direct depuis l'API dans le CurrencyProvider
 
 // ===== Catégories de matériel =====
 import type { MachineType } from "@/components/MachineArt";
