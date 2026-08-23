@@ -44,7 +44,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
-  let products = [];
+  let products: typeof catalog = [];
   if (slug === "travaux-interieur") {
     products = catalog.filter(p => p.category === "Travaux intérieur");
   } else if (slug === "equipements") {
