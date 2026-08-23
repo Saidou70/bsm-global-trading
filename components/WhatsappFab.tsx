@@ -6,7 +6,7 @@ export default function WhatsappFab() {
       href={`https://wa.me/${company.whatsapp}`}
       className="fab"
       target="_blank"
-      rel="noopener"
+      rel="noopener noreferrer"
       aria-label="WhatsApp"
     >
       <span className="fab-tooltip">Une question ?</span>
