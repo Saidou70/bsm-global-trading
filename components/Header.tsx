@@ -8,8 +8,9 @@ import Link from "next/link";
 
 const links = [
   { href: "#materiel", label: "Location" },
-  { href: "#tarifs", label: "Vente" },
+  { href: "/equipement", label: "Équipement" },
   { href: "#services", label: "Services" },
+  { href: "/pieces-de-rechange", label: "Pièces de Rechange" },
 ];
 
 export default function Header() {

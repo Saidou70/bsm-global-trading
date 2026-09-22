@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Catalog from "@/components/Catalog";
 import Features from "@/components/Features";
+import PiecesRechangePreview from "@/components/PiecesRechangePreview";
 import Conseils from "@/components/Conseils";
 import Footer from "@/components/Footer";
 import WhatsappFab from "@/components/WhatsappFab";
@@ -19,6 +20,7 @@ export default function Home() {
           <Catalog />
         </Suspense>
         <Features />
+        <PiecesRechangePreview />
         <Conseils />
       </main>
       <Footer />
